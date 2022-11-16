@@ -9,6 +9,15 @@ public class Categorie {
 	private Long id;
 	@Column(name = "libele")
 	private String label;
+	private String code;
+
+	public Categorie() {
+	}
+
+	public Categorie(String label, String code) {
+		this.label = label;
+		this.code = code;
+	}
 
 	public Long getId() {
 		return id;
@@ -24,6 +33,14 @@ public class Categorie {
 
 	public void setLabel(String label) {
 		this.label = label;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	@Override

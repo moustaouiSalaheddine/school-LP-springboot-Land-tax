@@ -21,4 +21,9 @@ public class CategorieServiceImpl implements CategorieService {
     public List<Categorie> findAll() {
         return categorieDao.findAll();
     }
+
+    @Override
+    public Categorie findByCode(String code) {
+        return categorieDao.findByCode(code);
+    }
 }

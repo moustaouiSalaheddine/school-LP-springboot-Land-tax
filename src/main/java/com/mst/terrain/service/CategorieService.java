@@ -8,4 +8,6 @@ public interface CategorieService {
 
     public void save(Categorie categorie);
     public List<Categorie> findAll();
+    public Categorie findByCode(String code);
+
 }
