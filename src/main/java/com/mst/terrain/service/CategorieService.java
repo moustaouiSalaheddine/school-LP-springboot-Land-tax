@@ -1,0 +1,11 @@
+package com.mst.terrain.service;
+
+import com.mst.terrain.bean.Categorie;
+
+import java.util.List;
+
+public interface CategorieService {
+
+    public void save(Categorie categorie);
+    public List<Categorie> findAll();
+}
