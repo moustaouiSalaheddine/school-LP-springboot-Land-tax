@@ -1,15 +1,12 @@
 package com.mst.terrain.bean;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Terrain {
 
-	@Id @GeneratedValue
-	private int id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY )
+	private Long id;
 	private String ref;
 	private String surface;
 	@ManyToOne
@@ -19,11 +16,11 @@ public class Terrain {
 	@ManyToOne
 	private Quartier quartier;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

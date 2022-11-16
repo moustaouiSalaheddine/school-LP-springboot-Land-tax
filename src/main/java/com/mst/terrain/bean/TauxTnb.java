@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import java.math.BigDecimal;
 
 @Entity
 public class TauxTnb {
@@ -11,14 +12,14 @@ public class TauxTnb {
     private Long id;
     @OneToOne
     private Categorie categorie;
-    private int surfaceMin;
-    private int surfaceMax;
+    private BigDecimal surfaceMin;
+    private BigDecimal surfaceMax;
     private double mtParMetre;
 
     public TauxTnb() {
     }
 
-    public TauxTnb( Categorie categorie, int surfaceMin, int surfaceMax, double mtParMetre) {
+    public TauxTnb( Categorie categorie, BigDecimal surfaceMin, BigDecimal surfaceMax, double mtParMetre) {
         this.categorie = categorie;
         this.surfaceMin = surfaceMin;
         this.surfaceMax = surfaceMax;
@@ -41,19 +42,19 @@ public class TauxTnb {
         this.categorie = categorie;
     }
 
-    public int getSurfaceMin() {
+    public BigDecimal getSurfaceMin() {
         return surfaceMin;
     }
 
-    public void setSurfaceMin(int surfaceMin) {
+    public void setSurfaceMin(BigDecimal surfaceMin) {
         this.surfaceMin = surfaceMin;
     }
 
-    public int getSurfaceMax() {
+    public BigDecimal getSurfaceMax() {
         return surfaceMax;
     }
 
-    public void setSurfaceMax(int surfaceMax) {
+    public void setSurfaceMax(BigDecimal surfaceMax) {
         this.surfaceMax = surfaceMax;
     }
 

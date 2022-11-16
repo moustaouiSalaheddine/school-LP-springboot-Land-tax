@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Secteur {
 
 	@Id @GeneratedValue
-	private int id;
+	private Long id;
 	private String label;
 	private String code;
 
@@ -21,11 +21,11 @@ public class Secteur {
 		this.code = code;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

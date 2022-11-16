@@ -18,14 +18,17 @@ public class TaxTnb {
     @OneToOne
     private Redevable redevable;
     @OneToOne
-private TauxTnb tauxTnb;
-private double mtTotal;
+    private TauxTnb tauxTnb;
+    private double mtTotal;
+    private int annee;
 
-    public TaxTnb( Terrain terrain, Redevable redevable, TauxTnb tauxTnb, double mtTotal) {
+    public TaxTnb(Categorie categorie, Terrain terrain, Redevable redevable, TauxTnb tauxTnb, double mtTotal, int annee) {
+        this.categorie = categorie;
         this.terrain = terrain;
         this.redevable = redevable;
         this.tauxTnb = tauxTnb;
         this.mtTotal = mtTotal;
+        this.annee = annee;
     }
 
     public TaxTnb() {
@@ -69,5 +72,21 @@ private double mtTotal;
 
     public void setMtTotal(double mtTotal) {
         this.mtTotal = mtTotal;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+
+    public int getAnnee() {
+        return annee;
+    }
+
+    public void setAnnee(int annee) {
+        this.annee = annee;
     }
 }
